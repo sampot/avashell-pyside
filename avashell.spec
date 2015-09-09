@@ -5,7 +5,7 @@ from __future__ import print_function
 
 import sys
 
-
+app_name = 'avashell'
 exe_name = 'avashell'
 
 res_path = os.path.join('.', 'res')
@@ -38,7 +38,7 @@ pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=True,
-          name=exe_name,
+          name=app_name,
           debug=False,
           strip=None,
           upx=True,
@@ -52,7 +52,7 @@ coll = COLLECT(exe,
 
                a.datas,
                strip=None,
-               upx=True,
+               upx=run_upx,
                name=exe_name)
 
 if sys.platform.startswith('darwin'):
