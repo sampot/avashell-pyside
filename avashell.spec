@@ -38,7 +38,7 @@ pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=True,
-          name=app_name,
+          name=exe_name,
           debug=False,
           strip=None,
           upx=True,
@@ -53,7 +53,7 @@ coll = COLLECT(exe,
                a.datas,
                strip=None,
                upx=run_upx,
-               name=exe_name)
+               name=app_name)
 
 if sys.platform.startswith('darwin'):
     app = BUNDLE(coll,
