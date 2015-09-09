@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-# -*- coding: utf-8 -*-
-
 from setuptools import setup, find_packages
 
+from avashell import APP_NAME, __version__
+
 setup(
-    name="python",
-    version='0.1.0',
+    name=APP_NAME,
+    version=__version__,
     description="The runtime support for nodes of Ava platform.",
     # package_dir={'': ''},
     packages=find_packages(exclude=['**/tests/*']),
