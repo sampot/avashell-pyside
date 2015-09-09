@@ -15,12 +15,10 @@ if sys.platform == 'win32':
     run_upx = False
 
 elif sys.platform.startswith('linux'):
-    exe_name = 'avaw'
     run_strip = True
     run_upx = False
 
 elif sys.platform.startswith('darwin'):
-    plat_name = 'avaw'
     run_upx = False
 
 else:
